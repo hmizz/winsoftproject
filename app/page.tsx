@@ -1,6 +1,11 @@
 import Header from "@/components/Header";
-import Image from "next/image";
+import Footer from "@/components/ui/footer";
 
 export default function Home() {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
 }
