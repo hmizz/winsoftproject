@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import logo from "../app/images/logo.png";
+import logoMobile from "../app/images/logoMobile.png";
 
 import Image from "next/image";
 
@@ -27,41 +28,45 @@ const components: { title: string; href: string }[] = [
   },
   {
     title: "Winsoft Commerciale Plus",
-    href: "/",
+    href: "#",
   },
   {
     title: "Winsoft Coptabilité",
-    href: "/",
+    href: "#",
   },
   {
     title: "Winsoft Dépôt Vente",
-    href: "/",
+    href: "#",
   },
   {
     title: "Winsoft Paye",
-    href: "/",
+    href: "#",
   },
   {
     title: "Winsoft Transit",
-    href: "/",
+    href: "#",
   },
 ];
 
 const Header = () => {
   return (
-    <header className="bg-white">
+    <header className="bg-white shadow-xl">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex items-center justify-between"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Winsoft Informatique</span>
-            <Image
-              src={logo}
-              alt="Winsoft Informatique"
-              className="h-20 w-auto"
-            />
+            <picture>
+              <source srcSet={logoMobile.src} media="(max-width: 368px)" />
+              <source srcSet={logo.src} media="(min-width: 369px)" />
+              <Image
+                src={logo}
+                alt="Winsoft Informatique"
+                className="w-auto h-20"
+              />
+            </picture>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -71,7 +76,7 @@ const Header = () => {
           >
             <span className="sr-only">Ouvrire menu</span>
             <svg
-              className="size-6"
+              className="size-8"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
