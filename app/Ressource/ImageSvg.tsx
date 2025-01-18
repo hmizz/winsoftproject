@@ -26,8 +26,8 @@ const ImageSvgFB = () => {
                 y2="43.432"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0" stop-color="#0d61a9"></stop>
-                <stop offset="1" stop-color="#16528c"></stop>
+                <stop offset="0" stopColor="#0d61a9"></stop>
+                <stop offset="1" stopColor="#16528c"></stop>
               </linearGradient>
               <path
                 fill="url(#awSgIinfw5_FS5MLHI~A9a_yGcWL8copNNQ_gr1)"
