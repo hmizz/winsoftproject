@@ -4,10 +4,10 @@ import Body from "@/components/ui/Body";
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
       <Body />
       <Footer />
-    </>
+    </div>
   );
 }
