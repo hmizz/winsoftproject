@@ -260,28 +260,7 @@ const FAQ: { Question: string; Answer: string }[] = [
       "Winsoft propose un support client réactif et de haute qualité. Notre équipe de support est disponible et prête à vous assister rapidement en cas de problèmes techniques ou de questions, garantissant ainsi une expérience utilisateur optimale.",
   },
 ];
-function TimeSelect() {
-  const generateTimeOptions = () => {
-    const times = [];
-    let currentTime = new Date();
-    currentTime.setHours(8, 30, 0, 0); // Start from 08:30
 
-    // Loop to generate time options up to 17:00
-    while (
-      currentTime.getHours() < 17 ||
-      (currentTime.getHours() === 17 && currentTime.getMinutes() === 0)
-    ) {
-      const hours = currentTime.getHours().toString().padStart(2, "0");
-      const minutes = currentTime.getMinutes().toString().padStart(2, "0");
-      times.push(`${hours}:${minutes}`);
-
-      // Increment time by 1 hour
-      currentTime.setHours(currentTime.getHours() + 1);
-    }
-
-    return times;
-  };
-}
 function Body() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: false })
@@ -292,7 +271,7 @@ function Body() {
 
   const generateTimeOptions = () => {
     const times = [];
-    let currentTime = new Date();
+    const currentTime = new Date();
     currentTime.setHours(8, 30, 0, 0); // Start from 08:30
 
     // Loop to generate time options up to 17:00

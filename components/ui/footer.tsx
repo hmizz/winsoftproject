@@ -1,6 +1,5 @@
 import React from "react";
-import { Separator } from "./separator";
-import { Label } from "./label";
+
 import { ImageSvgFB, ImageSvgLI } from "../../app/Ressource/ImageSvg";
 
 const Footer = () => {
