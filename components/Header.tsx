@@ -19,8 +19,6 @@ import logoMobile from "../app/images/logoMobile.png";
 
 import Image from "next/image";
 
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-
 const components: { title: string; href: string }[] = [
   {
     title: "Winsoft Garage Plus",
